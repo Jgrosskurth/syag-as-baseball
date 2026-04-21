@@ -1,0 +1,102 @@
+.schedule {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.schedule .schedule-table {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.schedule .schedule-game {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  border-left: 4px solid var(--color-border);
+  transition: all var(--transition);
+}
+
+.schedule .schedule-game:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.schedule .schedule-game.win {
+  border-left-color: var(--color-primary);
+  background: linear-gradient(90deg, rgb(26 71 42 / 5%) 0%, transparent 20%);
+}
+
+.schedule .schedule-game.loss {
+  border-left-color: #c0392b;
+}
+
+.schedule .schedule-game.practice {
+  border-left-color: var(--color-accent);
+  background: rgb(200 169 81 / 5%);
+}
+
+.schedule .schedule-game-date {
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  color: var(--color-primary);
+  white-space: nowrap;
+  min-width: 5.5rem;
+}
+
+.schedule .schedule-game-opponent {
+  font-weight: 600;
+  color: var(--color-dark);
+  margin-bottom: 0.25rem;
+}
+
+.schedule .schedule-game-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-gray);
+}
+
+.schedule .schedule-game-home-away {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  background: var(--color-light);
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+}
+
+.schedule .schedule-game-result {
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  white-space: nowrap;
+}
+
+.schedule .schedule-game.win .schedule-game-result {
+  color: var(--color-primary);
+}
+
+.schedule .schedule-game.loss .schedule-game-result {
+  color: #c0392b;
+}
+
+@media (max-width: 599px) {
+  .schedule .schedule-game {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .schedule .schedule-game-date {
+    font-size: var(--font-size-sm);
+  }
+
+  .schedule .schedule-game-meta {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

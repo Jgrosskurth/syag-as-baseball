@@ -1,0 +1,26 @@
+.footer {
+  background: var(--color-primary-dark);
+  color: var(--color-white);
+  padding: 0;
+}
+
+.footer .footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.footer .footer-content p {
+  margin: 0.5rem 0;
+  color: rgb(255 255 255 / 80%);
+  font-size: var(--font-size-sm);
+}
+
+.footer .footer-content a {
+  color: var(--color-accent);
+}
+
+.footer .footer-content a:hover {
+  color: var(--color-accent-light);
+}
